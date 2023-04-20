@@ -6,7 +6,7 @@ import plus from "../utils/img/plus.png";
 
 const SpecialMenu = () => {
   return (
-    <div className="w-full bg-[#F5F5F5] min-h-screen">
+    <div className="w-full bg-[#F5F5F5] min-h-[85vh] mb-[8vh]">
       <img src={banner} alt="banner" className="mt-[12vh] p-1 pt-4" />
       <div className="flex justify-between items-center px-6">
         <p>Todays Special</p>

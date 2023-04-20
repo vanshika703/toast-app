@@ -37,6 +37,12 @@
     border-radius: 8px;
 }
 
+.main-card{
+    background: #F6F6F6;
+    box-shadow: inset -2px 2px 4px rgba(220, 220, 220, 0.2), inset 2px -2px 4px rgba(220, 220, 220, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(220, 220, 220, 0.9);
+    border-radius: 10px;
+}
+
 .add-btn{
     background: #F0F0F3;
     box-shadow: -5px 5px 10px rgba(221, 221, 224, 0.2), 5px -5px 10px rgba(221, 221, 224, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 224, 0.9);

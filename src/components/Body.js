@@ -8,7 +8,7 @@ const Body = () => {
     <div>
         <Header/>
         <MainMenu/>
-        <SpecialMenu/>
+        {/* <SpecialMenu/> */}
         <Footer/>
     </div>
   )

@@ -16,7 +16,7 @@ const Header = () => {
         </div>
       </div>
       <div className="flex justify-around ">
-        <p className="text-[#3CBCB4] border-b-2 border-[#3CBCB4] pb-[1.5vh]">Special</p>
+        <p className="text-[#3CBCB4] border-b-2 border-[#3CBCB4] mb-0">Special</p>
         <p>Main</p>
         <p>Desserts</p>
         <p>Beverages</p>
