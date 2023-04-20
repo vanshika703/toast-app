@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{font-family: 'Poppins', sans-serif;}
+
 .header{
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
 
     background: #F0F3F3;
     /* button */
@@ -47,7 +52,7 @@
 .footer{
     position: fixed;
     bottom: 0;
-
+    height: 8vh;
     background: #F1F1F1;
     border-radius: 10px 10px 0px 0px;
 }

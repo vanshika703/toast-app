@@ -6,15 +6,15 @@ import plus from "../utils/img/plus.png";
 
 const SpecialMenu = () => {
   return (
-    <div className="w-full bg-[#F5F5F5] mb-20">
-      <img src={banner} alt="banner" className="mt-24 p-1 pt-4" />
+    <div className="w-full bg-[#F5F5F5] min-h-screen">
+      <img src={banner} alt="banner" className="mt-[12vh] p-1 pt-4" />
       <div className="flex justify-between items-center px-6">
         <p>Todays Special</p>
         <div className="border border-l-2 w-1/2 h-0"></div>
         <img src={arrow} alt="arrow" className="h-1 w-2" />
       </div>
       <div className="flex flex-wrap justify-center mt-2">
-        <div className="special-card p-1 m-1 w-[160px] h-[200px]">
+        <div className="special-card p-1 m-1">
           <img src={chocolatebowl} alt="chocolatebowl" />
           <div className="flex items-center my-1">
             <img src={veg} alt="veg" className="h-4 w-4 mx-2" />
@@ -32,7 +32,7 @@ const SpecialMenu = () => {
             </button>
           </div>
         </div>
-        <div className="special-card p-1 m-1 w-[160px] h-[200px]">
+        <div className="special-card p-1 m-1">
           <img src={chocolatebowl} alt="chocolatebowl" />
           <div className="flex items-center my-1">
             <img src={veg} alt="veg" className="h-4 w-4 mx-2" />
@@ -50,7 +50,7 @@ const SpecialMenu = () => {
             </button>
           </div>
         </div>
-        <div className="special-card p-1 m-1 w-[160px] h-[200px]">
+        <div className="special-card p-1 m-1">
           <img src={chocolatebowl} alt="chocolatebowl" />
           <div className="flex items-center my-1">
             <img src={veg} alt="veg" className="h-4 w-4 mx-2" />
@@ -68,7 +68,7 @@ const SpecialMenu = () => {
             </button>
           </div>
         </div>
-        <div className="special-card p-1 m-1 w-[160px] h-[200px]">
+        <div className="special-card p-1 m-1">
           <img src={chocolatebowl} alt="chocolatebowl" />
           <div className="flex items-center my-1">
             <img src={veg} alt="veg" className="h-4 w-4 mx-2" />
@@ -86,6 +86,7 @@ const SpecialMenu = () => {
             </button>
           </div>
         </div>
+        
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import img2 from "../utils/img/tag_black_24dp 1.png"
 const Header = () => {
   return (
     <div className="header">
-      <div className="mt-5 p-4 h-24 flex justify-between">
+      <div className=" p-4 flex justify-between mt-[3vh]">
         <div className="flex items-center">
           <img src={logo} alt="logo" className="h-8 w-8 mx-2"/>
           <h3>Scared Earth Cafe</h3>
@@ -16,7 +16,7 @@ const Header = () => {
         </div>
       </div>
       <div className="flex justify-around ">
-        <p>Special</p>
+        <p className="text-[#3CBCB4] border-b-2 border-[#3CBCB4] pb-[1.5vh]">Special</p>
         <p>Main</p>
         <p>Desserts</p>
         <p>Beverages</p>
