@@ -11,6 +11,12 @@ const Footer = () => {
     return store.cart;
   });
 
+  function calculateTotalQty() {
+    let qty = 0;
+    items.forEach((item) => (qty = qty + item.quantity));
+    return qty;
+  }
+
   return (
     <div className="footer flex justify-between p-4 px-8 w-full">
       <button className="footer-btn">
@@ -22,11 +28,9 @@ const Footer = () => {
         </button>
       </Link>
       <Link to="/cart">
-        {items.length === 0 ? (
-          <p></p>
-        ) : (
+        {calculateTotalQty() !== 0 && (
           <p className="absolute ml-5 mb-5 p-[2px] px-[6px] bg-red-500 text-white text-xs rounded-full">
-            {items.length}
+            {calculateTotalQty()}
           </p>
         )}
 

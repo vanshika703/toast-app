@@ -30,7 +30,7 @@ const Button = ({ item }) => {
 
   return (
     <button>
-      {(quantity && (
+      {quantity && quantity !== 0 ? (
         <div className="add-btn flex items-center">
           <div
             className="plus-btn flex justify-center items-center p-2 m-1"
@@ -38,19 +38,17 @@ const Button = ({ item }) => {
           >
             <img src={minus} alt="minus" className="h-[2px] w-[10px]" />
           </div>
-          <p className="p-1 px-2" onClick={handleAddItem}>
-            {quantity}
-          </p>
-          <div className="plus-btn flex justify-center items-center p-2 m-1">
+          <p className="p-1 px-2">{quantity}</p>
+          <div
+            className="plus-btn flex justify-center items-center p-2 m-1"
+            onClick={handleAddItem}
+          >
             <img src={plus} alt="plus" className="h-[10px] w-[10px]" />
           </div>
         </div>
-      )) || (
+      ) : (
         <div className="add-btn flex items-center" onClick={handleAddItem}>
-          <div
-            className="plus-btn flex justify-center items-center p-2 m-1"
-            
-          >
+          <div className="plus-btn flex justify-center items-center p-2 m-1">
             <img src={plus} alt="plus" className="h-[10px] w-[10px]" />
           </div>
           <p className="p-1 px-2">ADD</p>

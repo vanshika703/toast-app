@@ -1,11 +1,15 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
     items: [],
+    prevOrders: [],
   },
   reducers: {
+    addOrder: (state, action) => {
+      state.prevOrders.push(action.payload);
+    },
     addItem: (state, action) => {
       console.log("state.items", state.items);
       const foundIndex = state.items.findIndex(
@@ -23,7 +27,11 @@ const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       let i = state.items.findIndex((item) => item?.id === action.payload.id);
-      state.items[i].quantity--;
+      console.log(state.items[i].quantity);
+      if (state.items[i].quantity === 1) {
+        state.items.splice(i, 1);
+      } // remove item
+      else state.items[i].quantity--;
     },
     clearCart: (state) => {
       state.items = [];
@@ -32,5 +40,5 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addItem, removeItem, clearCart } = cartSlice.actions;
+export const { addItem, removeItem, clearCart, addOrder } = cartSlice.actions;
 export default cartSlice.reducer;
