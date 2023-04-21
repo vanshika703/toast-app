@@ -40,7 +40,7 @@ export const SPECIAL_MENU = [
 
 export const MAIN_MENU =[
     {
-      id: 0,
+      id: 4,
       img: acaibowl,
       name: "Sunrise Acai Bowl",
       veg: true,
@@ -48,7 +48,7 @@ export const MAIN_MENU =[
       quantity: 0,
     },
     {
-      id: 1,
+      id: 5,
       img: null,
       name: "Sunrise Acai Bowl",
       veg: true,
@@ -56,7 +56,7 @@ export const MAIN_MENU =[
       quantity: 0,
     },
     {
-      id: 2,
+      id: 6,
       img: acaibowl,
       name: "Item name in two lines increases height",
       veg: true,

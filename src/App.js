@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SpecialMenu from "./components/SpecialMenu";
 import MainMenu from "./components/MainMenu";
 import Cart from "./components/Cart";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const appRouter = createBrowserRouter([
   {
@@ -17,14 +19,16 @@ const appRouter = createBrowserRouter([
   {
     path: "/cart",
     element: <Cart />,
-  }
+  },
 ]);
 
 function App() {
   return (
-    <div className="App">
-      <RouterProvider router={appRouter}/>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <RouterProvider router={appRouter} />
+      </div>
+    </Provider>
   );
 }
 
