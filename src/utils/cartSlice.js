@@ -4,7 +4,6 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     items: [],
-    total: 0,
   },
   reducers: {
     addItem: (state, action) => {
@@ -12,7 +11,7 @@ const cartSlice = createSlice({
       const foundIndex = state.items.findIndex(
         (item) => item.id === action.payload.id
       );
-      if (foundIndex != -1) {
+      if (foundIndex !== -1) {
         state.items[foundIndex] = {
           ...action.payload,
           quantity: state.items[foundIndex].quantity + 1,
@@ -24,9 +23,7 @@ const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       let i = state.items.findIndex((item) => item?.id === action.payload.id);
-      state.items.splice(i, 1);
-      console.log("state items after", state.items);
-      state.total = state.total - action.payload.price;
+      state.items[i].quantity--;
     },
     clearCart: (state) => {
       state.items = [];

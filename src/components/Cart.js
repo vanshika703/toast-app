@@ -11,7 +11,7 @@ import { useState } from "react";
 const Cart = () => {
   const [isCurrentOpen, setIsCurrentOpen] = useState(true);
   const [isPreviousOpen, setIsPreviousOpen] = useState(true);
-  const { items: cartItems, total } = useSelector((store) => {
+  const { items: cartItems } = useSelector((store) => {
     return store.cart;
   });
 
@@ -42,9 +42,13 @@ const Cart = () => {
       </div>
       {isCurrentOpen && (
         <div className="cart-items p-2 m-2">
-          {cartItems?.map((item) => (
-            <CartItem key={item.id} item={item} />
-          ))}
+          {cartItems?.map((item, i) =>
+            item.quantity === 0 ? (
+              <p></p>
+            ) : (
+              <CartItem key={item.id} item={item} />
+            )
+          )}
           <p className="text-[#76DFE6] underline p-4">
             Add cooking instruction
           </p>
