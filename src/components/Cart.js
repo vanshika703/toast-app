@@ -4,15 +4,18 @@ import waiter from "../utils/img/icon-waiter.png";
 import arrow from "../utils/img/arrow.png";
 import veg from "../utils/img/veg.png";
 import plus from "../utils/img/plus.png";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   return (
     <div className="bg-[#F1F1F1] min-h-screen">
       <div className="cart-header flex justify-between items-center p-8">
         <div className="flex items-center justify-between">
-          <button className="cart-btn h-8 w-8 mr-4">
-            <img src={leftarrow} alt="leftarrow" className="w-5 h-5 m-auto" />
-          </button>
+          <Link to="/">
+            <button className="cart-btn h-8 w-8 mr-4">
+              <img src={leftarrow} alt="leftarrow" className="w-5 h-5 m-auto" />
+            </button>
+          </Link>
           <h3>Place Order</h3>
         </div>
         <button className="cart-btn h-8 w-8">

@@ -3,16 +3,14 @@ import Footer from "./Footer"
 import MainMenu from "./MainMenu"
 import SpecialMenu from "./SpecialMenu"
 import Cart from "./Cart"
+import { Outlet } from "react-router-dom"
 
 const Body = () => {
   return (
     <div>
-        {/* <Header/>
-
-        <MainMenu/>
-        <SpecialMenu/>
-        <Footer/> */}
-        <Cart/>
+        <Header/>
+        <Outlet/>
+        <Footer/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import logo from "../utils/img/logo.png"
 import img1 from "../utils/img/record_voice_over_black_24dp 1.png"
 import img2 from "../utils/img/tag_black_24dp 1.png"
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,8 +17,8 @@ const Header = () => {
         </div>
       </div>
       <div className="flex justify-around ">
-        <p className="text-[#3CBCB4] border-b-2 border-[#3CBCB4] mb-0">Special</p>
-        <p>Main</p>
+        <Link to="/"><p className="text-[#3CBCB4] border-b-2 border-[#3CBCB4] mb-0">Special</p></Link>
+        <Link to="/main"><p>Main</p></Link>
         <p>Desserts</p>
         <p>Beverages</p>
       </div>
