@@ -14,8 +14,8 @@ export const SPECIAL_MENU = [
   },
   {
     id: 1,
-    img: chocolatebowl,
-    name: "Chocolate Bowl",
+    img: sunsetbowl,
+    name: "Sunset Acai Bowl",
     veg: true,
     price: 299,
     quantity: 0,

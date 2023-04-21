@@ -5,7 +5,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
-*{font-family: 'Poppins', sans-serif;}
+
+@font-face {
+    font-family: "Graphik";
+    src: url("./fonts/GraphikRegular.otf") format("opentype");
+    src: url("./fonts/GraphikMedium.otf") format("opentype");
+  }
+  
+  html,
+  body {
+    font-family: "Graphik";
+    font-weight: 500;
+    color:#4A5662;
+  }
 
 .header{
     position: fixed;
@@ -29,6 +41,10 @@
 
     box-shadow: -1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
     border-radius: 10px;
+}
+
+.menu-category{
+    font-family: 'Poppins', sans-serif;
 }
 
 .special-card{
