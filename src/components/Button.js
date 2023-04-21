@@ -33,7 +33,7 @@ const Button = ({ item }) => {
       {quantity && quantity !== 0 ? (
         <div className="add-btn flex items-center">
           <div
-            className="plus-btn flex justify-center items-center p-2 m-1"
+            className="plus-btn flex justify-center items-center p-2 py-3 m-1"
             onClick={handleRemoveItem}
           >
             <img src={minus} alt="minus" className="h-[2px] w-[10px]" />
