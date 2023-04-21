@@ -1,12 +1,16 @@
 import leftarrow from "../utils/img/arrow-left.png";
 import rightarrow from "../utils/img/arrow-right.png";
 import waiter from "../utils/img/icon-waiter.png";
-import arrow from "../utils/img/arrow.png";
+import uparrow from "../utils/img/arrow.png";
+import downarrow from "../utils/img/downarrow.png";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
+import { useState } from "react";
 
 const Cart = () => {
+  const [isCurrentOpen, setIsCurrentOpen] = useState(true);
+  const [isPreviousOpen, setIsPreviousOpen] = useState(true);
   const { items: cartItems, total } = useSelector((store) => {
     return store.cart;
   });
@@ -29,22 +33,32 @@ const Cart = () => {
       <div className="flex justify-between items-center p-6">
         <p>Current Orders</p>
         <div className="border border-l-2 w-1/2 h-0"></div>
-        <img src={arrow} alt="arrow" className="h-1 w-2" />
+        <img
+          onClick={() => setIsCurrentOpen(!isCurrentOpen)}
+          src={isCurrentOpen ? uparrow : downarrow}
+          alt="arrow"
+          className="h-1 w-2"
+        />
       </div>
-      <div className="cart-items p-2 m-2">
-        {cartItems?.map((item) => (
-          <CartItem key={item.id} item={item} />
-        ))}
-        {cartItems && (
+      {isCurrentOpen && (
+        <div className="cart-items p-2 m-2">
+          {cartItems?.map((item) => (
+            <CartItem key={item.id} item={item} />
+          ))}
           <p className="text-[#76DFE6] underline p-4">
             Add cooking instruction
           </p>
-        )}
-      </div>
+        </div>
+      )}
       <div className="flex justify-between items-center p-6">
         <p>Previous Orders</p>
         <div className="border border-l-2 w-1/2 h-0"></div>
-        <img src={arrow} alt="arrow" className="h-1 w-2" />
+        <img
+          onClick={() => setIsPreviousOpen(!isPreviousOpen)}
+          src={isPreviousOpen ? uparrow : downarrow}
+          alt="arrow"
+          className="h-1 w-2"
+        />
       </div>
       <div className="place-order flex justify-between items-center fixed w-11/12 p-4 m-4 bottom-0 text-white">
         <p className="text-xs">{cartItems.length} Items</p>
