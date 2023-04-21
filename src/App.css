@@ -76,3 +76,34 @@
 box-shadow: inset -2px 2px 4px rgba(212, 212, 212, 0.2), inset 2px -2px 4px rgba(212, 212, 212, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(212, 212, 212, 0.9);
 border-radius: 10px;
 }
+
+.cart-header{
+    background: #F1F1F1;
+
+    box-shadow: -1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.cart-btn{
+    background: #F1F1F1;
+    box-shadow: -5px 5px 10px rgba(222, 222, 222, 0.2), 5px -5px 10px rgba(222, 222, 222, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(222, 222, 222, 0.9);
+    border-radius: 10px;
+    }
+
+    .cart-items{
+        background: #F1F1F1;
+    box-shadow: inset -3px -3px 7px #FFFFFF, inset 2px 2px 5px rgba(174, 174, 192, 0.4);
+    border-radius: 10px;
+    }
+
+    .place-order{
+        background: linear-gradient(135deg, #459EAF 0%, #007991 100%);
+    box-shadow: -5px 5px 10px rgba(205, 205, 205, 0.2), 5px -5px 10px rgba(205, 205, 205, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(205, 205, 205, 0.9);
+    border-radius: 10px;
+    }
+
+    .order-btn{
+        background: linear-gradient(135deg, #459EAF 0%, #007991 100%);
+        box-shadow: inset -2px 2px 4px rgba(28, 111, 128, 0.2), inset 2px -2px 4px rgba(28, 111, 128, 0.2), inset -2px -2px 4px rgba(42, 167, 192, 0.9), inset 2px 2px 5px rgba(28, 111, 128, 0.9);
+        border-radius: 100px;
+    }
