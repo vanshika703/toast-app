@@ -102,7 +102,7 @@ const Cart = () => {
       )}
       <div
         onClick={handlePlaceOrder}
-        className="place-order flex justify-between items-center fixed w-11/12 p-4 m-4 bottom-0 text-white"
+        className="place-order flex justify-between items-center fixed w-11/12 p-4 m-4 bottom-0 text-white sm:max-w-[360px]"
       >
         <p className="text-xs">{calculateTotalQty()} Items</p>
         <div className="flex items-center">

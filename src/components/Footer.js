@@ -1,11 +1,10 @@
 import strike from "../utils/img/strike.png";
 import menu from "../utils/img/menu.png";
 import cart from "../utils/img/cart.png";
-import { Link, useLocation } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const location = useLocation();
 
   const { items } = useSelector((store) => {
     return store.cart;
@@ -18,7 +17,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="footer flex justify-between p-4 px-8 w-full">
+    <div className="footer flex justify-between p-4 px-8 w-full sm:max-w-[400px]">
       <button className="footer-btn">
         <img src={strike} alt="strike" className="h-5 w-5 m-auto" />
       </button>

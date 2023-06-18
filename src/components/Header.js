@@ -7,7 +7,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <div className="header">
+    <div className="header sm:max-w-[400px]">
       <div className=" p-4 flex justify-between mt-[3vh]">
         <div className="flex items-center">
           <img src={logo} alt="logo" className="h-8 w-8 mx-2" />

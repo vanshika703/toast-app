@@ -25,7 +25,7 @@ const appRouter = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <div className="App sm:max-w-[400px]">
         <RouterProvider router={appRouter} />
       </div>
     </Provider>
